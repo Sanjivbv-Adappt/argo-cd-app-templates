@@ -1,26 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: guestbook
+  name: my-app-set
 spec:
   generators:
-  - list:
-      elements:
-      - cluster: engineering-dev
-        url: https://1.2.3.4
-      - cluster: engineering-prod
-        url: https://2.4.6.8
-      - cluster: finance-preprod
-        url: https://9.8.7.6
+    - cluster: {}
   template:
-    metadata:
-      name: '{{cluster}}-guestbook'
     spec:
       project: default
       source:
         repoURL: https://github.com/Sanjivbv-Adappt/argo-cd-app-templates.git
         targetRevision: HEAD
         path: applications
-      destination:
-        server: '{{url}}'
-        namespace: guestbook
