@@ -18,9 +18,9 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/argoproj/argo-cd.git
+        repoURL: https://github.com/Sanjivbv-Adappt/argo-cd-app-templates.git
         targetRevision: HEAD
-        path: applicationset/examples/list-generator/guestbook/{{cluster}}
+        path: applications
       destination:
         server: '{{url}}'
         namespace: guestbook
