@@ -6,11 +6,14 @@ spec:
   generators:
     - cluster:
         name: my-app
-        clusterParams:
-          - name: namespace
-            generate: expression
-            expression: "'namespace-' + cluster.metadata.name"
+      namespace:
+        name: namespace
+        generate: expression
+        expression: "'namespace-' + cluster.metadata.name"
   template:
+    helm:
+      valueFiles:
+        - values.yaml
     sourceType: directory
     directory:
       recurse: true
