@@ -7,6 +7,6 @@ spec:
     - cluster: {}
   template:
     sourceType: directory
-    directory:
+    directory: /applications
       recurse: true
       jsonnet: {}
