@@ -6,7 +6,7 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: app1-test
+      - cluster: app1
         url: http://localhostapp1
       - cluster: app2
         url: http://localhostapp2
