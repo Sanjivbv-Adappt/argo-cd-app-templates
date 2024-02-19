@@ -4,14 +4,10 @@ metadata:
   name: my-app-set
 spec:
   generators:
-    - cluster:
-        name: my-app
-        clusterParams:
-          - name: namespace
-            generate: expression
-            expression: "'namespace-' + cluster.metadata.name"
+    - cluster: {}
   template:
     sourceType: directory
     directory:
       recurse: true
       jsonnet: {}
+      sourcePath: /argocd  # Assuming app-set.yaml is in the argocd directory
