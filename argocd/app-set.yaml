@@ -7,9 +7,9 @@ spec:
   - list:
       elements:
       - cluster: app1
-        url: https://1.2.3.4
+        url: http://localhostapp1
       - cluster: app2
-        url: https://2.4.6.8
+        url: http://localhostapp2
   template:
     metadata:
       name: '{{cluster}}-guestbook'
