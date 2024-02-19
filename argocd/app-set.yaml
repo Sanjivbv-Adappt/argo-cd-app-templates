@@ -4,9 +4,17 @@ metadata:
   name: my-app-set
 spec:
   generators:
-    - cluster: {}
+    - clusterSelector:
+        matchLabels:
+          name: my-app
+      namespaceSelector:
+        matchLabels:
+          name: namespace
+        generate: expression
+        expression: "'namespace-' + cluster.metadata.name"
   template:
     sourceType: directory
-    directory: /applications
+    directory:
       recurse: true
       jsonnet: {}
+      sourcePath: /applications
