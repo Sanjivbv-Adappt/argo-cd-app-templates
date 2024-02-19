@@ -6,6 +6,10 @@ spec:
   generators:
     - cluster:
         name: my-app
+        clusterParams:
+          - name: namespace
+            generate: expression
+            expression: "'namespace-' + cluster.metadata.name"
   template:
     sourceType: directory
     directory:
