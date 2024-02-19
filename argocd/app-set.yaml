@@ -4,18 +4,9 @@ metadata:
   name: my-app-set
 spec:
   generators:
-    - cluster:
-        name: my-app
-      namespace:
-        name: namespace
-        generate: expression
-        expression: "'namespace-' + cluster.metadata.name"
+    - cluster: {}
   template:
-    helm:
-      valueFiles:
-        - values.yaml
     sourceType: directory
     directory:
       recurse: true
       jsonnet: {}
-      sourcePath: /applications
