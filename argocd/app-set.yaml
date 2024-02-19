@@ -4,10 +4,11 @@ metadata:
   name: my-app-set
 spec:
   generators:
-    - cluster: {}
+    - cluster:
+        name: my-app
   template:
     sourceType: directory
     directory:
       recurse: true
       jsonnet: {}
-      sourcePath: /argocd  # Assuming app-set.yaml is in the argocd directory
+      sourcePath: /applications
