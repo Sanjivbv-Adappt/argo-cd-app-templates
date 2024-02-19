@@ -21,6 +21,6 @@ spec:
         repoURL: https://github.com/Sanjivbv-Adappt/argo-cd-app-templates.git
         targetRevision: HEAD
         path: applications
-        destination:
+      destination:
         server: '{{url}}'
         namespace: my-app-set
