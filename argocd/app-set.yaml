@@ -16,7 +16,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: git@github.com:Sanjivbv-Adappt/argo-cd-app-templates.git
+        repoURL: https://github.com/Sanjivbv-Adappt/argo-cd-app-templates.git
         targetRevision: HEAD
         path: applications/{{cluster}}
       destination:
