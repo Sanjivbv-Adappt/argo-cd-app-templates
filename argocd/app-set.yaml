@@ -13,6 +13,8 @@ spec:
       - cluster: finance-preprod
         url: https://9.8.7.6
   template:
+    metadata:
+      name: '{{cluster}}-my-app-set'
     spec:
       project: default
       source:
