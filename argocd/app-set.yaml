@@ -6,12 +6,10 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: engineering-dev
+      - cluster: app1
         url: https://1.2.3.4
-      - cluster: engineering-prod
+      - cluster: app2
         url: https://2.4.6.8
-      - cluster: finance-preprod
-        url: https://9.8.7.6
   template:
     metadata:
       name: '{{cluster}}-guestbook'
@@ -20,7 +18,7 @@ spec:
       source:
         repoURL: https://github.com/argoproj/argo-cd.git
         targetRevision: HEAD
-        path: applicationset/examples/list-generator/guestbook/{{cluster}}
+        path: applications/{{cluster}}
       destination:
         server: '{{url}}'
-        namespace: guestbook
+        namespace: argocd
