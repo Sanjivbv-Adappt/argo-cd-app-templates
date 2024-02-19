@@ -4,7 +4,7 @@ metadata:
   name: my-app-set
 spec:
   generators:
-    - cluster: {}
+    - cluster: my-cluster
   template:
     spec:
       project: default
