@@ -20,5 +20,5 @@ spec:
         targetRevision: HEAD
         path: applications/{{cluster}}
       destination:
-        server: '{{url}}'
+        server: 'https://kubernetes.default.svc'
         namespace: argocd
