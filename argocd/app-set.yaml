@@ -4,7 +4,10 @@ metadata:
   name: my-app-set
 spec:
   generators:
-    - cluster: my-cluster
+  - list:
+      elements:
+      - cluster: engineering-dev
+        url: http://test.com
   template:
     spec:
       project: default
